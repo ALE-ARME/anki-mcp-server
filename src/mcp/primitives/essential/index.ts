@@ -49,6 +49,7 @@ export { ListDecksTool } from "./tools/list-decks.tool";
 export { DeckStatsTool } from "./tools/deck-stats.tool";
 export { CreateDeckTool } from "./tools/create-deck.tool";
 export { SetDeckLimitsTool } from "./tools/set-deck-limits.tool";
+export { ExportDeckToMarkdownTool } from "./tools/export-deck-to-markdown.tool";
 export { ChangeDeckTool } from "./tools/change-deck.tool";
 // Media tools (split from former mediaActions aggregate)
 export { RetrieveMediaFileTool } from "./tools/retrieve-media-file.tool";
@@ -105,6 +106,7 @@ import { ListDecksTool } from "./tools/list-decks.tool";
 import { DeckStatsTool } from "./tools/deck-stats.tool";
 import { CreateDeckTool } from "./tools/create-deck.tool";
 import { SetDeckLimitsTool } from "./tools/set-deck-limits.tool";
+import { ExportDeckToMarkdownTool } from "./tools/export-deck-to-markdown.tool";
 import { ChangeDeckTool } from "./tools/change-deck.tool";
 import { RetrieveMediaFileTool } from "./tools/retrieve-media-file.tool";
 import { GetMediaFilesNamesTool } from "./tools/get-media-files-names.tool";
@@ -156,6 +158,7 @@ export const ESSENTIAL_MCP_TOOLS = [
   DeckStatsTool,
   CreateDeckTool,
   SetDeckLimitsTool,
+  ExportDeckToMarkdownTool,
   ChangeDeckTool,
   // Media tools
   RetrieveMediaFileTool,
