@@ -164,6 +164,12 @@ function extractFrontAndBack(note: any): { frontRaw: string; backRaw: string } {
   return { frontRaw: "", backRaw: "" };
 }
 
+const DEFAULT_ARCHIVE_PATH_WIN =
+  "C:\\Users\\aless\\OneDrive\\RECORDS-OF-THE-ABYSS\\20s - UNIVERSITY\\24 - SCUOLA MISC\\ANKI DECKS PACKAGES\\Flashcards in md archive";
+
+const DEFAULT_ARCHIVE_PATH_ANDROID =
+  "/sdcard/OBSIDIAN/RECORDS-OF-THE-ABYSS/20s - UNIVERSITY/24 - SCUOLA MISC/ANKI DECKS PACKAGES/Flashcards in md archive";
+
 /**
  * Resolves the destination directory for markdown exports
  */
@@ -198,15 +204,13 @@ function resolveExportDirectory(customDir?: string): string {
     } catch {
       // Continue to default
     }
-    return "C:\\Users\\aless\\OneDrive\\RECORDS-OF-THE-ABYSS\\99 - PLUGINS\\Anki";
+    return DEFAULT_ARCHIVE_PATH_WIN;
   }
 
   // Non-Windows (Termux / Android / Linux)
-  const androidVaultPath =
-    "/sdcard/OBSIDIAN/RECORDS-OF-THE-ABYSS/99 - PLUGINS/Anki";
   try {
-    if (fs.existsSync(path.dirname(androidVaultPath))) {
-      return androidVaultPath;
+    if (fs.existsSync(DEFAULT_ARCHIVE_PATH_ANDROID)) {
+      return DEFAULT_ARCHIVE_PATH_ANDROID;
     }
   } catch {
     // Continue to fallback

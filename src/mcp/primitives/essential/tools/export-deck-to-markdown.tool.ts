@@ -15,7 +15,7 @@ export class ExportDeckToMarkdownTool {
   @Tool({
     name: "exportDeckToMarkdown",
     description:
-      "Export an Anki deck into an Obsidian-compatible Markdown file (with TARGET DECK header, front/retro syntax, note IDs, and referenced media images extracted).",
+      "Export an Anki deck into an Obsidian-compatible Markdown file, saving it directly into the Vault's Flashcards archive ('20s - UNIVERSITY/24 - SCUOLA MISC/ANKI DECKS PACKAGES/Flashcards in md archive').",
     parameters: z.object({
       deckName: z
         .string()
@@ -27,7 +27,7 @@ export class ExportDeckToMarkdownTool {
         .string()
         .optional()
         .describe(
-          "Optional custom directory to save the Markdown file and media images to (defaults to the Obsidian Vault Anki folder)",
+          "Optional custom directory to save the Markdown file and media images to (defaults to the Flashcards archive: '20s - UNIVERSITY/24 - SCUOLA MISC/ANKI DECKS PACKAGES/Flashcards in md archive')",
         ),
     }),
     outputSchema: z.object({
