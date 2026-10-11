@@ -9,7 +9,19 @@
   <p><strong>Seamlessly integrate <a href="https://apps.ankiweb.net">Anki</a> with AI assistants through the <a href="https://modelcontextprotocol.io">Model Context Protocol</a></strong></p>
 </div>
 
-**Beta** - This project is in active development. APIs and features may change.
+> [!IMPORTANT]
+> **Prefer the [AnkiMCP addon](https://ankiweb.net/shared/info/124672614) for most setups.**
+>
+> The addon ([GitHub](https://github.com/ankimcp/anki-mcp-server-addon)) runs the MCP server directly inside Anki. There is no Node.js to install, no AnkiConnect to configure, no separate process to keep running: install it with code `124672614`, restart Anki, and the server is up every time Anki opens. It covers local HTTP access and remote access through a built-in tunnel.
+>
+> This repository is the right choice when you specifically need:
+>
+> - **STDIO transport** — Claude Desktop, Claude Code, Cursor, or any client that spawns the server as a subprocess
+> - **MCPB bundle** — the one-click `.mcpb` install for Claude Desktop
+>
+> For HTTP, tunnel, or web-based clients (claude.ai, ChatGPT), the addon is the simpler and better-supported path.
+>
+> This repo is **not** being deprecated. It stays maintained and released alongside the addon as part of the same [ankimcp.ai](https://ankimcp.ai) project.
 
 A Model Context Protocol (MCP) server that enables AI assistants to interact with Anki, the spaced repetition flashcard application.
 
