@@ -51,6 +51,7 @@ export class SetDeckLimitsTool {
       readOnlyHint: false,
       destructiveHint: false,
       idempotentHint: true,
+      openWorldHint: false,
     },
   })
   async execute(

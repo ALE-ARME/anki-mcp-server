@@ -44,6 +44,7 @@ export class ExportDeckToMarkdownTool {
       readOnlyHint: false,
       destructiveHint: false,
       idempotentHint: true,
+      openWorldHint: true,
     },
   })
   async execute(

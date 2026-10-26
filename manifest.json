@@ -212,6 +212,10 @@
       "description": "Set daily limits (new cards per day and/or reviews per day) for an Anki deck and refresh the deck browser GUI"
     },
     {
+      "name": "exportDeckToMarkdown",
+      "description": "Export an Anki deck into an Obsidian-compatible Markdown file in the Vault Flashcards archive"
+    },
+    {
       "name": "changeDeck",
       "description": "Move cards to a different deck. Target deck will be created if it doesn't exist"
     },
